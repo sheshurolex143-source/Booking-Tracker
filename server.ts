@@ -2,7 +2,7 @@ import 'dotenv/config';
 import express from 'express';
 import path from 'path';
 import { createServer as createViteServer } from 'vite';
-import { connectDatabase, isMongoConnected } from './server/db/connect';
+import { connectDatabase, isMongoConnected } from './server/db/connect.ts';
 import { apiErrorHandler, apiNotFoundHandler } from './server/middleware/errorHandler';
 import { ensureSeededDatabase } from './server/repositories/store';
 import cancellationsRouter from './server/routes/cancellations';
@@ -51,7 +51,4 @@ async function startServer(): Promise<void> {
   });
 }
 
-startServer().catch((err) => {
-  console.error('[server] Fatal startup error:', err);
-  process.exit(1);
-});
+startServer();
