@@ -1,0 +1,8 @@
+{
+  "name": "Booking Cancellation Tracker",
+  "description": "Track booking cancellation requests, reference numbers, refund statuses, and overdue refund follow-ups across travel, accommodation, and events.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
